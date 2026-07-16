@@ -181,7 +181,7 @@ Configure environment properties:
 `CORS_ORIGINS`
 
 - Restart the application after saving changes.
-- 
+
 ### Database
 - Create a PostgreSQL database (AWS RDS or local).
 - Update the DATABASE_URL in the backend.
