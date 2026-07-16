@@ -78,7 +78,7 @@ Ask free-form questions like *"how much did I spend on food this month?"* or *"a
 | Data/ML | pandas, scikit-learn (forecasting), Naive Bayes (auto-categorization) |
 | AI Assistant | Google Gemini (`google-genai`) with function calling |
 | Reporting | openpyxl, reportlab |
-| Deployment | Docker, Render (API), Vercel (frontend) |
+| Deployment | Docker, elastic breanstalk, amplify |
 
 ## Project Structure
 
@@ -163,6 +163,46 @@ npm run dev
 > The AI assistant and Google Sign-In are both optional — the app runs fully without either, with the chatbot falling back to its offline engine automatically.
 
 ## Deployment
+### Frontend (AWS Amplify)
+- Deploy the React (Vite) application to AWS Amplify.
+- Configure environment variables:
+`VITE_API_URL`
+`VITE_GOOGLE_CLIENT_ID`
+- Redeploy the application after updating environment variables.
+- Backend (AWS Elastic Beanstalk)
+- Deploy the FastAPI backend to Elastic Beanstalk.
+
+Configure environment properties:
+`DATABASE_URL`
+`SECRET_KEY`
+`GOOGLE_CLIENT_ID`
+`GEMINI_API_KEY`
+`FRONTEND_URL`
+`CORS_ORIGINS`
+
+- Restart the application after saving changes.
+- 
+### Database
+- Create a PostgreSQL database (AWS RDS or local).
+- Update the DATABASE_URL in the backend.
+
+### CloudFront
+- Create a CloudFront distribution with the Elastic Beanstalk application as the origin.
+- Configure HTTPS and use the CloudFront URL as the frontend API endpoint.
+- Update VITE_API_URL with the CloudFront URL and redeploy Amplify.
+
+### Google OAuth
+- Create an OAuth 2.0 Client ID in Google Cloud Console.
+- Add the Amplify domain to Authorized JavaScript Origins.
+- Add the backend callback URL to Authorized Redirect URIs (if applicable).
+- Copy the Client ID to both frontend and backend environment variables.
+
+### Verification
+- Verify the backend is accessible via /docs.
+- Test database connectivity.
+- Test user registration and login.
+- Verify Google Sign-In works successfully.
+- Test AI features powered by the Gemini API.
 
 ## License
 
