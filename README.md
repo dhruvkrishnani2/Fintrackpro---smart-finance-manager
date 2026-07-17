@@ -206,9 +206,9 @@ Configure environment properties:
 
 ### Deployment Links -
 
-`Frontend` - https://staging.d1d9qd34ya1sig.amplifyapp.com/ ,
-`Backend` - http://fintrack-backend-env-1.eba-x4rfatbw.eu-north-1.elasticbeanstalk.com/ ,
-`Api(Docs)` - http://fintrack-backend-env-1.eba-x4rfatbw.eu-north-1.elasticbeanstalk.com/docs
+- `Frontend` - https://staging.d1d9qd34ya1sig.amplifyapp.com/ ,
+- `Backend` - http://fintrack-backend-env-1.eba-x4rfatbw.eu-north-1.elasticbeanstalk.com/ ,
+- `Api(Docs)` - http://fintrack-backend-env-1.eba-x4rfatbw.eu-north-1.elasticbeanstalk.com/docs
 
 ## License
 
