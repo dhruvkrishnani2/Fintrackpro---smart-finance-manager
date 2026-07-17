@@ -204,6 +204,12 @@ Configure environment properties:
 - Verify Google Sign-In works successfully.
 - Test AI features powered by the Gemini API.
 
+### Deployment Links -
+
+`Frontend` - https://staging.d1d9qd34ya1sig.amplifyapp.com/ ,
+`Backend` - http://fintrack-backend-env-1.eba-x4rfatbw.eu-north-1.elasticbeanstalk.com/ ,
+`Api(Docs)` - http://fintrack-backend-env-1.eba-x4rfatbw.eu-north-1.elasticbeanstalk.com/docs
+
 ## License
 
 MIT
